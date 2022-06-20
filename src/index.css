@@ -1,0 +1,923 @@
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  height: 800px;
+  position: relative;
+  overflow-x: hidden;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.navbar{
+  background-color: rgb(238, 163, 23);
+  padding: 20px;
+  width: 100%;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index:999;
+}
+
+.navbar .navbar-brand{
+  color:blue;
+  font-size:45px;
+  letter-spacing: 2px;
+  line-height: 1.2;
+  font-weight: 700;
+}
+
+.navbar .navbar-nav{
+  margin-left: auto;
+}
+
+.navbar a{
+  text-transform: capitalize;
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+  letter-spacing: 1px;
+  font-weight: 500;
+  cursor:pointer
+}
+
+.navbar a:hover{
+  text-decoration: underline;
+  color:#fff;
+}
+
+.navbar .navbar-toggler-icon{
+    display: inline-block;
+    width: 1.5em;
+    height: 1.5em;
+    vertical-align: middle;
+    content: "";
+    background: no-repeat center center;
+    background-size: 100% 100%;
+  }
+
+  .hero {
+    position: relative;
+    width: 100%;
+    margin-bottom: 45px;
+    padding: 120px 0 0 0;
+    overflow: hidden;
+    background: linear-gradient(rgb(238, 163, 23), rgba(239, 35, 60, .95)), url(img/hero-bg.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-top: 0.1px solid white;
+}
+
+.hero .container-fluid {
+    padding: 0;
+}
+
+.hero .hero-image {
+    position: relative;
+    text-align: right;
+    padding-right: 75px;
+    padding-bottom: 50px;
+}
+
+.hero .hero-image img {
+    max-width: 100%;
+}
+.hero .hero-content {
+    position: relative;
+    padding-left: 75px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.hero .hero-text p {
+    color: #ffffff;
+    font-size: 25px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.hero .hero-text h1 {
+    color: #ffffff;
+    font-size: 60px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    margin-bottom: 15px;
+}
+
+.hero .hero-text h2::before {
+  content:"";
+    display: inline-block;
+    margin: 0;
+    height: 35px;
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 600;
+    overflow:hidden;
+    white-space:nowrap;
+    margin :0 auto;
+    letter-spacing: 1px;
+    animation:
+    typing 2.5s steps(40,end) infinite,
+    blink-caret 10s step-end infinite;
+}
+
+
+@keyframes typing{
+  from{
+    width:0
+  }
+  to{
+    width:100%
+  }
+}
+
+@keyframes blink-caret{
+  from,to {border-color:transparent}
+  0%{
+    content:"Web Designer"
+  }
+  25%{
+    content:" Full Stack Developer"
+  }
+  50%{
+    content:"Front End Developer"
+  }
+  75%{
+    content:"App Developer"
+  }
+}
+
+.hero .hero-text .typed-cursor {
+    font-size: 35px;
+    font-weight: 300;
+    color: #ffffff;
+}
+
+.hero .hero-btn .btn {
+    margin-top: 35px;
+    color: orange;
+    background: #ffffff;
+    box-shadow: inset 0 0 0 50px #ffffff;
+}
+
+.hero .hero-btn .btn:hover {
+    color: #ffffff;
+    background: transparent;
+    box-shadow: inset 0 0 0 0 #ffffff;
+    border-color: #ffffff;
+}
+
+.hero .hero-btn .btn:first-child {
+    margin-right: 10px;
+}
+
+@media (max-width: 991.98px) {
+    .hero {
+        padding-top: 60px;
+    }
+    .hero .hero-image {
+      text-align: right;
+    padding-left: 75px;
+    padding-bottom: 50px;
+    margin-top: 20px;
+    }
+    .hero .hero-content {
+        padding: 0 15px;
+    }
+    .hero .hero-text p {
+        font-size: 20px;
+    }
+    
+    .hero .hero-text h1 {
+        font-size: 45px;
+    }
+    
+    .hero .hero-text h2 {
+        font-size: 25px;
+        height: 25px;
+    }
+    
+    .hero .hero-btn .btn {
+        padding: 12px 30px;
+        letter-spacing: 1px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .hero {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+    
+    .hero,
+    .hero .hero-text,
+    .hero .hero-btn {
+        width: 100%;
+        text-align: center;
+    }
+    
+    .hero .hero-text p {
+        font-size: 18px;
+    }
+    
+    .hero .hero-text h1 {
+        font-size: 35px;
+    }
+    
+    .hero .hero-text h2 {
+        font-size: 22px;
+        height: 22px;
+    }
+    
+    .hero .hero-btn .btn {
+        padding: 10px 15px;
+        letter-spacing: 1px;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .hero .hero-text p {
+        font-size: 16px;
+    }
+    
+    .hero .hero-text h1 {
+        font-size: 30px;
+    }
+    
+    .hero .hero-text h2 {
+        font-size: 18px;
+        height: 18px;
+    }
+    
+    .hero .hero-btn .btn {
+        padding: 8px 10px;
+        letter-spacing: 0;
+    }
+}
+
+/******* Section Header ********/
+/*******************************/
+.section-header {
+  position: relative;
+  margin-bottom: 45px;
+}
+
+.section-header p {
+  display: inline-block;
+  margin: 0 30px;
+  margin-bottom: 10px;
+  padding-left: 15px;
+  position: relative;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  background: #ffffff;
+}
+
+.section-header p::before {
+  position: absolute;
+  content: "";
+  height: 3px;
+  top: 11px;
+  right: 0;
+  left: -30px;
+  background: orange;
+  z-index: -1;
+}
+
+.section-header p::after {
+  position: absolute;
+  content: "";
+  width: 3px;
+  height: 3px;
+  top: 11px;
+  left: 3px;
+  background: orange;
+  z-index: 1;
+}
+
+.section-header h2 {
+  margin: 0;
+  position: relative;
+  font-size: 45px;
+  font-weight: 700;
+}
+
+@media (max-width: 767.98px) {
+  .section-header h2 {
+      font-size: 30px;
+  }
+}
+
+
+/*******************************/
+/********** About CSS **********/
+/*******************************/
+.about {
+  position: relative;
+  width: 100%;
+  background: linear-gradient(rgb(238, 163, 23), rgba(239, 35, 60, .95)), url(img/hero-bg.jpg);
+  margin: 1px 0 15px 0;
+}
+
+.about .col-lg-6 {
+  text-align: right;
+  padding: 10;
+}
+
+.about .section-header {
+  margin-bottom: 30px;
+}
+
+.about .about-img {
+  position: relative;
+  height: 100%;
+  text-align: right;
+}
+
+.about .about-img .big {
+  position: relative;
+  max-width: 70%;
+  max-height: 40%;
+  object-fit: contain;
+  display: block;
+}
+
+.about .about-img .small {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: none;
+}
+@media (max-width: 640px) and (min-width: 320px){
+  .about .about-img {
+    text-align: right;
+    padding-left: 55px;
+    padding-bottom: 5px;
+    margin-top: 20px; 
+  }
+  .about .about-img .big {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+
+}
+
+.about .about-img .small {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+}
+
+
+.about .about-content {
+  padding: 0 60px;
+}
+
+.about .about-text p {
+  font-size: 16px;
+}
+
+.about .skills {
+  margin-bottom: 30px;
+}
+
+.about .skill-name {
+  margin-top: 15px;
+}
+
+.about .skill-name p {
+  display: inline-block;
+  margin-bottom: 5px;
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 2;
+}
+
+.about .skill-name p:last-child {
+  float: right;
+}
+
+.about .progress {
+  height: 10px;
+  border-radius: 10px;
+  background: #dddddd;
+}
+
+.about .progress .progress-bar {
+  width: 500px;
+  background: rgb(255, 255, 75);
+  border-radius: 10px;
+  transition: 2s;
+}
+
+.about .progress .progress-bar1 {
+  width: 600px;
+  background: rgb(255, 255, 75);
+  border-radius: 10px;
+  transition: 2s;
+}
+
+
+.about .progress .progress-bar2 {
+  width: 550px;
+  background: rgb(255, 255, 75);
+  border-radius: 10px;
+  transition: 2s;
+}
+@media (max-width:768px) {
+  .about .progress .progress-bar {
+    width: 250px;
+    background: rgb(255, 255, 75);
+    border-radius: 30px;
+    transition: 2s;
+  }
+  
+.about .progress .progress-bar1 {
+  width:300px;
+  background: rgb(255, 255, 75);
+  border-radius: 30px;
+  transition: 2s;
+}
+  
+.about .progress .progress-bar2 {
+  width: 275px;
+  background: rgb(255, 255, 75);
+  border-radius: 10px;
+  transition: 2s;
+}
+}
+
+@keyframes typing{
+ 0%{
+  width:0%;
+ }
+ 25%{
+  width: 25%;
+ }
+ 50%{
+  width: 50%;
+ }
+ 100%{
+  width:90%
+ }
+}
+
+@keyframes typings{
+  0%{
+   width:90%;
+  }
+  25%{
+   width: 25%;
+  }
+  50%{
+   width:0%
+  }
+ }
+ 
+.about .about-text a.btn {
+  margin-top: 15px;
+}
+
+@media (max-width: 991.98px) {
+  .about .about-content {
+      padding: 45px 15px 0 15px;
+  }
+}
+
+/********* Service CSS *********/
+/*******************************/
+.service {
+  position: relative;
+  width: 100%;
+  padding: 45px 0 15px 0;
+}
+
+.service .service-item {
+  position: relative;
+  margin-bottom: 30px;
+  display: flex;
+  align-items: center;
+  box-shadow: inset 0 0 0 0 transparent;
+  transition: ease-out 0.5s;
+}
+
+.service .service-item:hover {
+  box-shadow: inset 800px 0 0 0 orange;
+}
+
+.service .service-icon {
+  position: relative;
+  width: 150px;
+  min-height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid orange;
+  background: #ffffff;
+  padding: 10px;
+}
+
+.service .service-icon img {
+  width:100%;
+  position: relative;
+  font-size: 60px;
+  color: orange;
+  transition: .3s;
+}
+
+.service .service-item:hover img {
+  font-size: 75px;
+}
+
+.service .service-text {
+  position: relative;
+  width: calc(100% - 120px);
+  padding: 0 30px;
+}
+
+.service .service-text h3 {
+  margin-bottom: 10px;
+  font-size: 20px;
+  font-weight: 600;
+  transition: 1s;
+}
+
+.service .service-text p {
+  margin: 0;
+  font-size: 16px;
+  transition: 1s;
+}
+
+.service .service-item:hover .service-text h3,
+.service .service-item:hover .service-text p {
+  color: #ffffff;
+}
+
+@media (max-width: 575.98px) {
+  .service .service-text h3 {
+      font-size: 16px;
+      margin-bottom: 5px;
+  }
+  
+  .service .service-text p {
+      font-size: 14px;
+  }
+}
+
+/******** Portfolio CSS ********/
+/*******************************/
+.portfolio {
+  position: relative;
+  padding: 45px 0 15px 0;
+}
+
+.portfolio #portfolio-filter {
+  padding: 0;
+  margin: -15px 0 25px 0;
+  list-style: none;
+  font-size: 0;
+  text-align: center;
+}
+
+.portfolio #portfolio-filter li {
+  cursor: pointer;
+  display: inline-block;
+  margin: 5px;
+  padding: 6px 12px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #ffffff;
+  background: orange;
+  border: 2px solid transparent;
+  border-radius: 0;
+  box-shadow: inset 0 0 0 50px orange;
+  transition: ease-out 0.3s;
+  -webkit-transition: ease-out 0.3s;
+  -moz-transition: ease-out 0.3s;
+}
+
+.portfolio #portfolio-filter li:hover,
+.portfolio #portfolio-filter li.filter-active {
+  color: orange;
+  background: transparent;
+  box-shadow: inset 0 0 0 0 orange;
+  border-color: orange;
+}
+
+.portfolio .portfolio-item {
+  position: relative;
+}
+
+.portfolio .portfolio-wrap {
+  position: relative;
+  width: 100%;
+}
+
+.portfolio .portfolio-img {
+  position: relative;
+  overflow: hidden;
+}
+
+.portfolio .portfolio-img img {
+  position: relative;
+  width: 100%; 
+  max-height: 100%; 
+  object-fit: cover;
+  transform: scale(1.1);
+  transition: .5s;
+}
+
+.portfolio .portfolio-item:hover img {
+  margin-left: 15px;
+}
+
+.portfolio .portfolio-text {
+  position: relative;
+  height: 60px;
+  width: calc(100% - 30px);
+  margin: -30px 15px 30px 15px;
+  display: flex;
+  align-items: center;
+  background: #ffffff;
+  box-shadow: 0 0 15px rgba(0, 0, 0, .12);
+}
+
+.portfolio .portfolio-text h3 {
+  width: calc(100% - 70px);
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0 0 0 15px;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.portfolio .portfolio-text a.btn {
+  width: 50px;
+  height: 50px;
+  padding: 0 0 2px 1px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 45px;
+  font-weight: 100;
+}
+
+.portfolio .portfolio-item:hover a.btn {
+  color: orange;
+  background: transparent;
+  box-shadow: inset 0 0 0 0 orange;
+  border-color: orange;
+}
+
+
+/********* Contact CSS *********/
+/*******************************/
+.contact {
+  position: relative;
+  width: 100%;
+  margin: 45px 0;
+  background: linear-gradient(rgb(238, 163, 23), rgba(239, 35, 60, .95));
+}
+
+.contact .container-fluid {
+  background: url(img/heroog.png) left center no-repeat;
+  background-size: contain;
+}
+
+.contact .contact-form {
+  position: relative;
+  padding: 90px 0 90px 45px;
+  background: transparent;
+}
+
+.contact .contact-form input {
+  color: #ffffff;
+  padding: 15px 0;
+  background: none;
+  border-radius: 0;
+  border: none;
+  border-bottom: 1px solid rgba(256, 256, 256, .5);
+}
+
+.contact .contact-form textarea {
+  color: #ffffff;
+  height: 90px;
+  padding: 15px 0;
+  background: none;
+  border-radius: 0;
+  border: none;
+  border-bottom: 1px solid rgba(256, 256, 256, .5);
+}
+
+.contact .contact-form .form-control::placeholder {
+  color: #ffffff;
+  opacity: 1;
+}
+
+.contact .contact-form .form-control:-ms-input-placeholder,
+.contact .contact-form .form-control::-ms-input-placeholder {
+  color: #ffffff;
+}
+
+.contact .contact-form .btn {
+  margin-top: 35px;
+  color: orange;
+  background: #ffffff;
+  box-shadow: inset 0 0 0 50px #ffffff;
+}
+
+.contact .contact-form .btn:hover {
+  color: #ffffff;
+  background: transparent;
+  box-shadow: inset 0 0 0 0 #ffffff;
+  border-color: #ffffff;
+}
+
+.contact .help-block ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  font-size: 14px;
+  font-style: italic;
+  color: #ffffff;
+}
+
+@media (max-width: 767.98px) {
+  .contact .container-fluid {
+      background: none;
+  }
+  
+  .contact .contact-form {
+      padding: 90px 0;
+  }
+}
+
+.back-to-top {
+  position: fixed;
+  display: block;
+  width: 44px;
+  height: 44px;
+  padding: 8px 0;
+  text-align: center;
+  line-height: 1;
+  font-size: 22px;
+  right: 15px;
+  bottom: 15px;
+  z-index: 9;
+}
+
+.back-to-top i {
+  color: #ffffff;
+  font-size: 30px;
+  background-color: crimson;
+  padding: 5px 10px 2px 10px;
+}
+
+.back-to-top:hover i {
+  color: #414141;
+}
+
+/********* Footer CSS **********/
+/*******************************/
+.footer {
+  position: relative;
+  margin-top: 45px;
+  background: rgb(238, 163, 23);
+}
+
+.footer .container-fluid {
+  padding: 60px 0 0 0;
+}
+
+.footer .footer-info {
+  position: relative;
+  width: 100%;
+  text-align: center;
+}
+
+.footer .footer-info h2 {
+  margin-bottom: 20px;
+  font-size: 30px;
+  font-weight: 700;
+  color: #000000;
+}
+
+.footer .footer-info h3 {
+  margin-bottom: 25px;
+  font-size: 22px;
+  font-weight: 600;
+  color: #000000;
+}
+
+.footer .footer-menu {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.footer .footer-menu p {
+  color: #000000;
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 20px;
+  padding: 0 15px;
+  border-right: 1px solid #000000;
+}
+
+.footer .footer-menu p:last-child {
+  border: none;
+}
+
+.footer .footer-social {
+  position: relative;
+  margin-top: 15px;
+}
+
+.footer .footer-social a {
+  display: inline-block;
+}
+
+.footer .footer-social a i {
+  margin-right: 15px;
+  font-size: 20px;
+  color: #000000;
+  transition: .3s;
+}
+
+.footer .footer-social a:last-child i {
+  margin: 0;
+}
+
+.footer .footer-social a:hover i {
+  color: #414141;
+}
+
+.footer .copyright {
+  position: relative;
+  text-align: center;
+  margin-top: 30px;
+  padding-top: 25px;
+  padding-bottom: 25px;
+}
+
+.footer .copyright::before {
+  position: absolute;
+  content: "";
+  width: 50%;
+  height: 1px;
+  top: 0;
+  left: 25%;
+  background: rgba(256, 256, 256, .2);
+}
+
+.footer .copyright p {
+  margin: 0;
+  color: #000000;
+}
+
+.footer .copyright .col-md-6:last-child p {
+  text-align: right;
+}
+
+.footer .copyright p a {
+  color: #000000;
+  font-weight: 600;
+}
+
+.footer .copyright p a:hover {
+  color: #414141;
+}
+
+@media (max-width: 575.98px) {
+  .footer .footer-info h2 {
+      margin-bottom: 20px;
+      font-size: 20px;
+      font-weight: 600;
+  }
+
+  .footer .footer-info h3 {
+      margin-bottom: 20px;
+      font-size: 16px;
+  }
+
+  .footer .footer-menu p {
+      font-size: 16px;
+      line-height: 16px;
+      padding: 0 5px;
+  }
+}
